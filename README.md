@@ -1,6 +1,9 @@
 # Thin UI
 
 ```
+= 2.0.1 =
+* FEATURE: Added modal dialog
+
 = 2.0.0 =
 * FIX: Prefixed all classes
 * ENHANCEMENT: Removed and combined all related elements
