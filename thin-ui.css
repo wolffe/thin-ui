@@ -429,6 +429,79 @@ html {
 
 
 
+/**
+ * Thin UI single-element toggle switch
+ */
+input[type="checkbox"].thin-ui-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    position: relative;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin: 0 4px;
+    background: none;
+    box-shadow: none;
+}
+
+input[type="checkbox"].thin-ui-toggle:focus {
+    box-shadow: none;
+}
+
+input[type="checkbox"].thin-ui-toggle:after {
+    content: '';
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 18px;
+    text-indent: -14px;
+    color: #ffffff;
+    width: 36px;
+    height: 18px;
+    display: inline-block;
+    background-color: #a7aaad;
+    border-radius: 72px;
+    box-shadow: 0 0 12px rgb(0 0 0 / 15%) inset;
+}
+
+input[type="checkbox"].thin-ui-toggle:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+input[type="checkbox"].thin-ui-toggle:checked:before {
+    left: 20px;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+input[type="checkbox"].thin-ui-toggle,
+input[type="checkbox"].thin-ui-toggle:before,
+input[type="checkbox"].thin-ui-toggle:after,
+input[type="checkbox"].thin-ui-toggle:checked:before,
+input[type="checkbox"].thin-ui-toggle:checked:after {
+    transition: ease .15s;
+}
+
+input[type="checkbox"].thin-ui-toggle:checked:after {
+    background-color: var(--thin-ui-primary);
+}
+
+
 
 .col--inner {
     background-color: #ffffff;
@@ -476,8 +549,7 @@ html {
 .thin-ui-pill {
     white-space: nowrap;
     display: flex;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px;
-    line-height: 1.2;
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 16%);
     max-width: 100%;
     margin: 0px 10px 10px 0px;
     border-width: 1px;
@@ -548,12 +620,6 @@ label.thin-ui-popover {
 label.thin-ui-popover button[name="popover"] {
     font-family: inherit;
     font-size: inherit;
-    background: none;
-    border: 0 none;
-    display: inline;
-    outline: none;
-    color: inherit;
-    padding: unset;
     cursor: pointer;
 }
 
@@ -697,6 +763,7 @@ label.thin-ui-popover button:focus + .thin-ui-popover-body {
 }
 
 .thin-ui-modal-close {
+    cursor: pointer;
     margin-left: auto;
     background: none;
     border: 0 none;
