@@ -1,6 +1,12 @@
 # Thin UI
 
 ```
+= 2.0.2 =
+* FEATURE: Added single-element toggle
+* FIX: Fixed the pill line height
+* ENHANCEMENT: Reset the popover button
+* ENHANCEMENT: Improved the modal close button usability
+
 = 2.0.1 =
 * FEATURE: Added modal dialog
 
