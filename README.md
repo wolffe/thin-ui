@@ -1,6 +1,9 @@
 # Thin UI
 
 ```
+= 2.0.3 =
+* FIX: Update popover to not inherit parent's styles
+
 = 2.0.2 =
 * FEATURE: Added single-element toggle
 * FIX: Fixed the pill line height
