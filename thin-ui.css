@@ -1,7 +1,7 @@
 /**
  * Thin UI CSS Framework
  *
- * @version 2.0.2
+ * @version 2.0.3
  */
 :root {
     --thin-ui-primary: #323CB9;
@@ -621,12 +621,15 @@ label.thin-ui-popover button[name="popover"] {
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
+    border: 0 none;
+    background: none;
 }
 
 label.thin-ui-popover .thin-ui-popover-body {
     display: none;
 
     font-size: 13px;
+    font-weight: 400;
     border-radius: 2px;
     padding: 16px 36px 16px 16px;
     background-color: #ffffff;
