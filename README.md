@@ -1,8 +1,13 @@
 # Thin UI
 
 ```
+= 2.1.0 =
+* FEATURE: Added the details/summary element
+* FIX: Updated the popover to not require a label element
+* FIX: Updated the popover to be less overqualified
+
 = 2.0.3 =
-* FIX: Update popover to not inherit parent's styles
+* FIX: Updated the popover to not inherit parent's styles
 
 = 2.0.2 =
 * FEATURE: Added single-element toggle

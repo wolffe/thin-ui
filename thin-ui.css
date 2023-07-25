@@ -1,7 +1,7 @@
 /**
  * Thin UI CSS Framework
  *
- * @version 2.0.3
+ * @version 2.1.0
  */
 :root {
     --thin-ui-primary: #323CB9;
@@ -10,6 +10,9 @@
 
     --thin-ui-action: #4FAE33;
     --thin-ui-warning: #FF7F00;
+
+    --thin-ui-details: #dbf6fd;
+    --thin-ui-details-outline: #bbe1eb;
 }
 
 html {
@@ -234,7 +237,6 @@ html {
     border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     outline-color: var(--thin-ui-secondary);
-    transition: 100ms all ease-in-out;
 }
 
 .thin-ui-form input[type="submit"],
@@ -614,18 +616,21 @@ input[type="checkbox"].thin-ui-toggle:checked:after {
 /**
  * Thin UI Popovers
  */
-label.thin-ui-popover {
+.thin-ui-popover {
     position: relative;
 }
-label.thin-ui-popover button[name="popover"] {
+.thin-ui-popover button[name="popover"] {
+    appearance: none;
+
     font-family: inherit;
     font-size: inherit;
     cursor: pointer;
+    box-shadow: none;
     border: 0 none;
     background: none;
 }
 
-label.thin-ui-popover .thin-ui-popover-body {
+.thin-ui-popover .thin-ui-popover-body {
     display: none;
 
     font-size: 13px;
@@ -644,7 +649,7 @@ label.thin-ui-popover .thin-ui-popover-body {
     max-width: 480px;
 }
 
-label.thin-ui-popover button:focus + .thin-ui-popover-body {
+.thin-ui-popover button:focus + .thin-ui-popover-body {
     display: block;
 }
 
@@ -792,4 +797,67 @@ label.thin-ui-popover button:focus + .thin-ui-popover-body {
 .thin-ui-modal-button-group button {
     font-weight: inherit;
     font-family: inherit;
+}
+
+
+
+/**
+ * Details
+ */
+details.thin-ui-details {
+    position: relative;
+    border-radius: 2px;
+    background-color: var(--thin-ui-details);
+    padding: 1em;
+    margin: 16px 0;
+    border: 1px solid var(--thin-ui-details-outline);
+}
+
+details.thin-ui-details summary {
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    line-height: 1.25;
+}
+details.thin-ui-details[open] summary {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--thin-ui-details-outline);
+}
+details.thin-ui-details summary > small {
+}
+details.thin-ui-details summary > * {
+    display: inline;
+}
+
+details.thin-ui-details summary::before {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-right: 1em;
+    content: '';
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='31' viewBox='0 0 30 31'%3E%3Cg id='Group_1' data-name='Group 1' transform='translate(-11 -292)'%3E%3Cellipse id='Ellipse_1' data-name='Ellipse 1' cx='15' cy='15.5' rx='15' ry='15.5' transform='translate(11 292)' fill='%2369b9ce'/%3E%3Cpath id='Path_3' data-name='Path 3' d='M4.524-17.368a4.507,4.507,0,0,0-1.56.312.278.278,0,0,0-.13.286V-14.9c0,2.184.416,8.294.468,9.022a.172.172,0,0,0,.182.156h2.08c.156,0,.182-.078.182-.156.078-.78.52-6.916.52-9.1v-1.872a.326.326,0,0,0-.156-.286A5.112,5.112,0,0,0,4.524-17.368Zm0,17.576A1.7,1.7,0,0,0,6.4-1.534,1.741,1.741,0,0,0,4.524-3.328,1.77,1.77,0,0,0,2.652-1.534,1.7,1.7,0,0,0,4.524.208Z' transform='translate(22 316)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+details.thin-ui-details summary::after {
+    width: 30px;
+    height: 100%;
+    border-radius: 2px;
+    display: block;
+    content: '';
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6.861' viewBox='0 0 12 6.861'%3E%3Cpath d='M12.19,16.039,16.727,11.5a.854.854,0,0,1,1.211,0,.865.865,0,0,1,0,1.215L12.8,17.858a.856.856,0,0,1-1.183.025L6.438,12.717A.858.858,0,1,1,7.649,11.5Z' transform='translate(18.188 18.108) rotate(180)' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+    background-color: #69b9ce;
+    transform: rotate(180deg);
+}
+details.thin-ui-details[open] summary::after {
+    transform: rotate(0deg);
 }
