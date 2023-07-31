@@ -3,6 +3,7 @@
 ```
 = 2.1.1 =
 * FIX: Fixed unstyled non-link pill value
+* UPDATE: Updated pills to use Flexbox
 
 = 2.1.0 =
 * FEATURE: Added the details/summary element

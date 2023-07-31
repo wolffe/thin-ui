@@ -547,13 +547,15 @@ input[type="checkbox"].thin-ui-toggle:checked:after {
     font-size: 13px;
     margin: 8px 0;
     padding: 0;
+    gap: 8px;
 }
 .thin-ui-pill {
     white-space: nowrap;
     display: flex;
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 16%);
     max-width: 100%;
-    margin: 0 8px 0 0;
+    margin: 0;
+    padding: 0;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(189, 180, 199);
