@@ -3,7 +3,9 @@
 ```
 = 2.1.1 =
 * FIX: Fixed unstyled non-link pill value
+* FIX: Fixed undeclared accent colour to match the primary colour
 * UPDATE: Updated pills to use Flexbox
+* UPDATE: Added box-sizing reset
 
 = 2.1.0 =
 * FEATURE: Added the details/summary element

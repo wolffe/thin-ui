@@ -15,6 +15,10 @@
     --thin-ui-details-outline: #bbe1eb;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -261,6 +265,11 @@ html {
 .thin-ui-form textarea:hover {
     border-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.075);
+}
+
+.thin-ui-form *,
+.thin-ui-color-well {
+    accent-color: var(--thin-ui-primary);
 }
 
 
