@@ -1,7 +1,7 @@
 /**
  * Thin UI CSS Framework
  *
- * @version 2.1.0
+ * @version 2.1.1
  */
 :root {
     --thin-ui-primary: #323CB9;
@@ -553,7 +553,7 @@ input[type="checkbox"].thin-ui-toggle:checked:after {
     display: flex;
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 16%);
     max-width: 100%;
-    margin: 0px 10px 10px 0px;
+    margin: 0 8px 0 0;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(189, 180, 199);
@@ -569,12 +569,14 @@ input[type="checkbox"].thin-ui-toggle:checked:after {
 .thin-ui-pill-value {
     min-width: 0px;
     white-space: nowrap;
-    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     max-width: 100%;
     padding: 4px 8px;
     background: rgb(251, 251, 252);
+    color: var(--thin-ui-primary);
     border-left: 1px solid rgb(189, 180, 199);
     border-radius: 0 2px 2px 0;
+    line-height: 1.45;
 }
 .thin-ui-pill-value > a {
     text-decoration: none;
@@ -826,8 +828,6 @@ details.thin-ui-details[open] summary {
     margin-bottom: 1em;
     padding-bottom: 1em;
     border-bottom: 1px solid var(--thin-ui-details-outline);
-}
-details.thin-ui-details summary > small {
 }
 details.thin-ui-details summary > * {
     display: inline;

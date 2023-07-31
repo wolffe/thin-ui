@@ -1,6 +1,9 @@
 # Thin UI
 
 ```
+= 2.1.1 =
+* FIX: Fixed unstyled non-link pill value
+
 = 2.1.0 =
 * FEATURE: Added the details/summary element
 * FIX: Updated the popover to not require a label element
